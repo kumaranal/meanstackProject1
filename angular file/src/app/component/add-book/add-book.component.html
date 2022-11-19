@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row ">
+    <div class="col-md-6">
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label >Name</label>
+                <input type="text" class="form-control" formControlName="name" required>
+            </div>
+            <div class="form-group">
+                <label >price</label>
+                <input type="text" class="form-control" formControlName="price" required>
+            </div>
+            <div class="form-group">
+                <label >description</label>
+                <input type="text" class="form-control" formControlName="description" required>
+            </div>
+            <div class="form-group">
+                <button class="btn bg-light" type="submit">Add DATA</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <h2 class="h2">
+            All book list
+        </h2>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Description</th>
+                    <th class="text-center" scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books;let i= index">
+                    <td >{{book.name}}</td>
+                    <td >{{book.price}}</td>
+                    <td >{{book.description}}</td>
+                    <td class="text-center">
+                        <button class="btn btn-primary"   (click)="edit(book._id)">edit</button>
+                        <button class="btn btn-primary" (click)="delete(book._id,i)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
